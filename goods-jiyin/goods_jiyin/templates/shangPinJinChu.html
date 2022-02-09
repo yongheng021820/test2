@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>出入库记录</title>
+  <link rel="stylesheet" href="/static/css/shangPinJinChu.css">
+  <script src="/static/js/jquery-3.5.0.min.js"></script>
+</head>
+<body>
+<div id="GOODS">
+  <div class="goods">
+    <br>
+    <br>
+    <table class="tab" id="tab">
+      <tr class="banner">
+        <td>序号</td>
+        <td class="GoodsName">商品名称</td>
+        <td>入库+</td>
+        <td>出库-</td>
+        <td>库存量(件)</td>
+      </tr>
+
+      <tr class="sd_add_goods">
+        <td></td>
+        <td class="GoodsName">商品名称</td>
+        <td>入库+</td>
+        <td>出库-</td>
+        <td>库存量(件)</td>
+      </tr>
+    </table>
+    <br><br>
+    <span class="add-goods">
+        <button id="sd_add_goods">添加商品</button>
+        <button id="select_month">查询出库记录</button>
+        <button id="select_goods_year">查询入库记录</button>
+      </span>
+    <!-- 查询数据相关表 -->
+    <br><br><br><br><br><br>
+    <table class="out-int" id="out_int">
+      <thead>
+        <span> 出/入库记录查询</span>
+      </thead>
+      <tr name="first_tr">
+        <td>序号</td>
+        <td>商品名</td>
+        <td>数量</td>
+        <td>日期</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+{#点击添加商品的弹框#}
+<div id="add_goods_box">
+  <h2 style="text-align: center">添加商品</h2>
+  <hr>
+  <span>商品名称:</span>
+  <input type="text" placeholder="goods_name" id="add_goods_name">
+  <br>
+  <span>商品数量:</span>
+  <input type="text" placeholder="goods_number"
+         id="add_goods_number">
+  <br>
+  <input style="margin-left: 120px" id="sure"
+         type="button" value="确定">
+  <input type="submit" id="back" value="取消"
+         style="margin-left: 40px">
+</div>
+
+{#点击出库数据的弹框#}
+<div id="select_goods_box">
+  <h2>输入要查询出库记录的年份、月份</h2>
+  <hr>
+  <spa>查询年份</spa>
+  <input type="text" placeholder="year" id="select_box_year">
+  <br>
+  <span>查询月份</span>
+  <input type="text" placeholder="month" id="select_box_month">
+  <br>
+  <input style="margin-left: 80px" id="select_sure"
+         type="button" value="确定">
+  <input type="submit" id="select_back" value="取消"
+         style="margin-left: 40px">
+</div>
+
+{#点击入库数据的弹框#}
+<div id="select_red_goods_year">
+  <h2>输入要查询入库记录的年份、月份</h2>
+  <hr>
+  <spa>查询年份</spa>
+  <input type="text" placeholder="year" id="select_red_year">
+  <br>
+  <span>查询月份</span>
+  <input type="text" placeholder="month" id="select_red_month">
+  <br>
+  <input style="margin-left: 80px" id="select_red_sure"
+         type="button" value="确定">
+  <input type="submit" id="select_red_back" value="取消"
+         style="margin-left: 40px">
+</div>
+</body>
+<script src="/static/js/shangPinJiLu.js"></script>
+</html>
+
+

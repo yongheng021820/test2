@@ -1,0 +1,1 @@
+python C:\Users\yongheng\Desktop\goods-jiyin\goods_jiyin\manage.py runserver
